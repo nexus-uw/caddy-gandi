@@ -10,9 +10,10 @@ this is handy for enabling HTTPS for internal sites hosted at home
 3. gets the browser to stop complaining about insecure pages
 4. lets you set CSP on your selfhosted sites (todo: get ref on when chrome stopped CSP for http sites)
 
-todo <repo url>
+#how
+get docker image url from https://github.com/nexus-uw/caddy-do/pkgs/container/caddy-do
 
-set the DO_API env var
+set the *DO_API* env var for the container
 
 then in your caddyfile
   

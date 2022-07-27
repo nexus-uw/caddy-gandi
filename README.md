@@ -11,7 +11,6 @@ this is handy for enabling HTTPS for internal sites hosted at home
 4. lets you set CSP on your selfhosted sites (todo: get ref on when chrome stopped CSP for http sites)
 
 todo <repo url>
-todo rebuild schedule
 
 set the DO_API env var
 

@@ -1,11 +1,11 @@
 FROM caddy:2-builder-alpine AS builder
 
 RUN xcaddy build \
-    --with github.com/caddy-dns/digitalocean@master
+    --with github.com/caddy-dns/gandi@master
 
 
 FROM caddy:2-alpine
 
-ENV DO_API SETMEUP
+ENV GANDI_API_TOKEN SETMEUP
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy

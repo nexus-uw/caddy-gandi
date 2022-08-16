@@ -1,4 +1,5 @@
 # caddy-gandi
+[![Docker](https://github.com/nexus-uw/caddy-gandi/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/nexus-uw/caddy-gandi/actions/workflows/docker-publish.yml)
 caddy server docker image with the gandi dns module installed https://github.com/caddy-dns/gandi
 
 # why

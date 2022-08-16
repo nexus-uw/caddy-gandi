@@ -1,19 +1,16 @@
-# caddy-do
-caddy server docker image with the digitalocean dns module installed https://github.com/caddy-dns/digitalocean
+# caddy-gandi
+caddy server docker image with the gandi dns module installed https://github.com/caddy-dns/gandi
 
 # why
-this is handy for enabling HTTPS for internal sites hosted at home
+see https://github.com/nexus-uw/caddy-do
 
-## why https at home?
-1. with this, its easy
-2. prevents network devices from listing in at home. (who knows what those ring devices do or can be turned on to do?)
-3. gets the browser to stop complaining about insecure pages
-4. lets you set CSP on your selfhosted sites (todo: get ref on when chrome stopped CSP for http sites)
+also, it should be noted that the Digital Ocean DNS manager while free does not (yet) support DNSSEC as of aug 2022 (https://ideas.digitalocean.com/network/p/add-dnssec-support-to-the-dns-manager)
+
 
 #how
-get docker image url from https://github.com/nexus-uw/caddy-do/pkgs/container/caddy-do
+get docker image url from https://github.com/nexus-uw/caddy-gandi/pkgs/container/caddy-gandi
 
-set the *DO_API* env var for the container
+set the *GANDI_API_TOKEN* env var for the container
 
 then in your caddyfile
   
@@ -21,7 +18,7 @@ then in your caddyfile
 your.athome.domain.com {
 	respond "Hello World"	# replace with whatever config you need...
 	tls {
-		dns digitalocean {env.DO_API}
+		dns gandi {env.GANDI_API_TOKEN}
 	}
 }
 ```

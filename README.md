@@ -15,7 +15,7 @@ set the *GANDI_API_TOKEN* env var for the container
 then in your caddyfile
   
 ```
-your.athome.domain.com {
+your.better.domain.pl {
 	respond "Hello World"	# replace with whatever config you need...
 	tls {
 		dns gandi {env.GANDI_API_TOKEN}

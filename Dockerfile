@@ -1,7 +1,7 @@
 FROM caddy:2-builder-alpine AS builder
 
 RUN xcaddy build \
-    --with github.com/caddy-dns/gandi@master --with github.com/caddy-dns/cloudflare@master
+    --with github.com/caddy-dns/gandi@master --with github.com/caddy-dns/cloudflare@master --with github.com/caddyserver/cache-handler@master
 
 
 FROM caddy:2-alpine

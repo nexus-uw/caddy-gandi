@@ -8,4 +8,6 @@ FROM caddy:2-alpine
 
 ENV GANDI_API_TOKEN SETMEUP
 
+LABEL org.opencontainers.image.authors="nexus-uw@github"
+
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
